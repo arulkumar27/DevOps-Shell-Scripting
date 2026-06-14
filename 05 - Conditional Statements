@@ -1,0 +1,23 @@
+If Statement
+if [ 5 -gt 3 ]
+then
+    echo "True"
+fi
+
+If Else
+if [ $AGE -ge 18 ]
+then
+    echo "Adult"
+else
+    echo "Minor"
+fi
+
+Production Disk Monitoring
+DISK=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+
+if [ $DISK -gt 80 ]
+then
+    echo "CRITICAL"
+else
+    echo "HEALTHY"
+fi
