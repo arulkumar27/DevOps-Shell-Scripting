@@ -1,0 +1,25 @@
+Check File Exists
+FILE="/tmp/app.log"
+
+if [ -f "$FILE" ]
+then
+    echo "File Exists"
+else
+    echo "File Not Found"
+fi
+
+Create Files and Directories
+touch app.log
+
+mkdir backups
+Copy Files
+cp app.log backups/
+Move Files
+mv app.log old-app.log
+Delete Files
+rm old-app.log
+
+Production Example: Backup Before Deployment
+BACKUP_DIR="/backup"
+
+cp application.yml $BACKUP_DIR/application.yml.$(date +%F-%H%M)
