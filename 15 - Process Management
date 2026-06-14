@@ -1,0 +1,19 @@
+View Running Processes
+ps -ef
+
+Find Specific Process
+ps -ef | grep nginx
+
+Kill Process
+kill PID
+
+Force Kill:
+kill -9 PID
+
+Real-Time Example
+Restart Application If Process Dies
+
+if ! pgrep nginx
+then
+    systemctl restart nginx
+fi
