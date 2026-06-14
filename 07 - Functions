@@ -1,0 +1,32 @@
+Why Functions?
+
+Avoid duplicate code.
+
+Bad Example:
+
+df -h
+df -h
+df -h
+
+Good Example:
+
+check_disk() {
+    df -h
+}
+
+check_disk
+
+Production Example
+restart_nginx() {
+    systemctl restart nginx
+}
+
+check_nginx() {
+
+    systemctl is-active nginx
+
+    if [ $? -ne 0 ]
+    then
+        restart_nginx
+    fi
+}
