@@ -1,0 +1,40 @@
+What is Shell Scripting?
+
+Shell scripting is the process of automating Linux and Unix operating system tasks using a sequence of commands stored inside a script file.
+
+A shell script allows DevOps engineers to automate:
+
+Server provisioning
+Health checks
+Log rotation
+Backup operations
+Application deployment
+Monitoring
+Incident response
+Real-Time Example
+
+Imagine 100 Linux servers.
+
+Without Shell Script:
+
+ssh server1
+df -h
+
+ssh server2
+df -h
+
+ssh server3
+df -h
+
+With Shell Script:
+
+for server in $(cat servers.txt)
+do
+    ssh $server "df -h"
+done
+Why DevOps Engineers Use Shell Scripts
+Task	Manual Time	Script Time
+Disk Check	30 min	10 sec
+Log Cleanup	1 hr	5 sec
+Deployment	20 min	2 min
+Backup	45 min	Automated
