@@ -1,0 +1,37 @@
+What is AWK?
+
+AWK is used for processing columns and structured text.
+
+Sample File:
+
+Arul DevOps 50000
+John AWS 60000
+Raj Linux 45000
+
+Print First Column:
+
+awk '{print $1}' employees.txt
+
+Output:
+
+Arul
+John
+Raj
+
+Print Multiple Columns
+awk '{print $1,$3}' employees.txt
+
+Output:
+
+Arul 50000
+John 60000
+Raj 45000
+Real-Time Example
+
+Get CPU Usage:
+
+top -bn1 | grep Cpu
+
+Process with AWK:
+
+top -bn1 | grep Cpu | awk '{print $2}'
