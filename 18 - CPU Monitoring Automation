@@ -1,0 +1,16 @@
+CPU Usage
+top -bn1
+
+Extract CPU Percentage
+top -bn1 | grep Cpu
+
+Production Script
+CPU=$(top -bn1 | grep Cpu | awk '{print $2}' | cut -d. -f1)
+
+if [ "$CPU" -gt 80 ]
+then
+    echo "High CPU Usage"
+fi
+
+Top CPU Consuming Processes
+ps -eo pid,%cpu,cmd --sort=-%cpu | head
