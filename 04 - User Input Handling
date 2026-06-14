@@ -1,0 +1,18 @@
+Read User Input
+read -p "Enter Name: " NAME
+
+echo "Welcome $NAME"
+Password Input
+read -sp "Enter Password: " PASS
+Real-Time Deployment Script
+#!/bin/bash
+
+read -p "Enter Environment: " ENV
+
+echo "Deploying to $ENV"
+
+Output:
+
+Enter Environment: production
+
+Deploying to production
