@@ -1,0 +1,41 @@
+What is Cron?
+
+Cron is a Linux scheduler used to run scripts automatically at specified times.
+
+Why DevOps Engineers Use Cron?
+Automated Backups
+Log Cleanup
+Health Monitoring
+Security Checks
+Database Dumps
+Report Generation
+View Existing Cron Jobs
+crontab -l
+Edit Cron Jobs
+crontab -e
+Cron Syntax
+* * * * * command
+│ │ │ │ │
+│ │ │ │ └── Day of Week (0-7)
+│ │ │ └──── Month
+│ │ └────── Day of Month
+│ └──────── Hour
+└────────── Minute
+Examples
+
+Run every minute:
+
+* * * * * /home/scripts/health.sh
+
+Run every day at 2 AM:
+
+0 2 * * * /home/scripts/backup.sh
+
+Run every Sunday:
+
+0 0 * * 0 /home/scripts/weekly-report.sh
+Real-Time DevOps Example
+
+Disk Monitoring Every 5 Minutes
+
+*/5 * * * * /opt/scripts/disk-monitor.sh
