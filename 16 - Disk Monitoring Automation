@@ -1,0 +1,21 @@
+Check Disk Usage
+df -h
+
+Check Specific Partition
+df -h /
+
+Production Script
+#!/bin/bash
+
+THRESHOLD=80
+USAGE=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+
+if [ "$USAGE" -gt "$THRESHOLD" ]
+then
+    echo "Disk Critical"
+else
+    echo "Disk Healthy"
+fi
+
+Email Alert Example
+mail -s "Disk Alert" admin@company.com
