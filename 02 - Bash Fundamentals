@@ -1,0 +1,38 @@
+What is Bash?
+
+Bash stands for:
+
+Bourne Again Shell
+
+Default shell in most Linux distributions.
+
+Check current shell:
+
+echo $SHELL
+
+Output:
+
+/bin/bash
+Bash Execution Flow
+User
+ ↓
+Shell
+ ↓
+Kernel
+ ↓
+Hardware
+Script Structure
+#!/bin/bash
+
+echo "Hello DevOps"
+Shebang Explained
+#!/bin/bash
+
+Tells Linux which interpreter should execute the script.
+
+Make Script Executable
+chmod +x script.sh
+
+Run Script:
+
+./script.sh
