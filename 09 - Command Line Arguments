@@ -1,0 +1,28 @@
+Understanding Arguments
+./deploy.sh production v1.0
+
+Arguments:
+
+$1 = production
+
+$2 = v1.0
+
+Script:
+
+echo $1
+echo $2
+Real-Time Deployment
+#!/bin/bash
+
+ENV=$1
+VERSION=$2
+
+echo "Deploying $VERSION to $ENV"
+
+Run:
+
+./deploy.sh production v2.1
+
+Output:
+
+Deploying v2.1 to production
