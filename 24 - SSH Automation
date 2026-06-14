@@ -1,0 +1,32 @@
+What is SSH?
+SSH allows secure remote access to Linux servers.
+
+Connect Server
+ssh ec2-user@10.0.0.10
+
+Generate SSH Key
+ssh-keygen
+
+Output:
+
+id_rsa
+id_rsa.pub
+Copy Public Key
+ssh-copy-id ec2-user@10.0.0.10
+Passwordless Login
+ssh ec2-user@10.0.0.10
+
+No password required.
+
+Run Remote Command
+ssh ec2-user@10.0.0.10 "uptime"
+Real-Time DevOps Example
+
+Check Multiple Servers
+
+#!/bin/bash
+
+for SERVER in $(cat servers.txt)
+do
+    ssh ec2-user@$SERVER "df -h"
+done
