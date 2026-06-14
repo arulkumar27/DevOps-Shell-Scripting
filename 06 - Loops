@@ -1,0 +1,20 @@
+For Loop
+for i in {1..5}
+do
+    echo $i
+done
+
+While Loop
+COUNT=1
+
+while [ $COUNT -le 5 ]
+do
+    echo $COUNT
+    COUNT=$((COUNT+1))
+done
+
+Real-Time Multi Server Monitoring
+for SERVER in $(cat servers.txt)
+do
+    ssh $SERVER uptime
+done
