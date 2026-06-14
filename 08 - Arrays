@@ -1,0 +1,19 @@
+Creating Arrays
+SERVERS=("web1" "web2" "web3")
+
+Access:
+
+echo ${SERVERS[0]}
+Iterate Arrays
+for SERVER in "${SERVERS[@]}"
+do
+    echo $SERVER
+done
+
+Real-Time Example
+SERVERS=("10.0.0.10" "10.0.0.11" "10.0.0.12")
+
+for SERVER in "${SERVERS[@]}"
+do
+    ssh ec2-user@$SERVER uptime
+done
