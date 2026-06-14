@@ -1,0 +1,33 @@
+Variables
+NAME="Arul"
+AGE=25
+
+echo $NAME
+echo $AGE
+Real-Time Deployment Example
+ENVIRONMENT="production"
+
+echo "Deploying to $ENVIRONMENT"
+Environment Variables
+
+Display all:
+
+env
+
+Important Variables:
+
+HOME
+PATH
+USER
+HOSTNAME
+PWD
+
+Example:
+
+echo $PATH
+Add Custom Variable
+export PROJECT=DevOps
+
+Verify:
+
+echo $PROJECT
