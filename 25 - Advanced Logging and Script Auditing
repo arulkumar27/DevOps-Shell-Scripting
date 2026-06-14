@@ -1,0 +1,53 @@
+Why Logging?
+Production scripts must always generate logs.
+
+Without logs:
+Problem occurred
+No idea where
+
+With logs:
+Easy troubleshooting
+Root Cause Analysis
+Write Logs
+echo "Backup Started"
+
+Store in File:
+echo "Backup Started" >> backup.log
+Logging with Timestamp
+echo "$(date) Backup Started" >> backup.log
+
+Example:
+Sun Jun 14 10:00:00 Backup Started
+Production Logging Function
+log() {
+    echo "$(date) : $1" >> /var/log/devops.log
+}
+
+Usage:
+log "Deployment Started"
+log "Docker Container Created"
+log "Deployment Completed"
+Capture Errors
+command >> output.log 2>&1
+
+Explanation:
+
+1 = Standard Output
+
+2 = Standard Error
+
+>&1 = Combine Both
+Production Deployment Example
+#!/bin/bash
+
+LOGFILE="/var/log/deployment.log"
+
+echo "$(date) Deployment Started" >> $LOGFILE
+
+docker pull myapp:latest >> $LOGFILE 2>&1
+
+docker stop myapp >> $LOGFILE 2>&1
+
+docker run -d myapp:latest >> $LOGFILE 2>&1
+
+echo "$(date) Deployment Completed" >> $LOGFILE
