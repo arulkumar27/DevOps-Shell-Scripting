@@ -1,0 +1,33 @@
+What is SED?
+
+SED is a stream editor used for modifying text.
+
+Sample:
+
+Dev Environment
+
+Replace Text:
+
+sed 's/Dev/Prod/' file.txt
+
+Output:
+
+Prod Environment
+Replace Inside Configuration File
+
+Before:
+
+APP_ENV=dev
+
+Command:
+
+sed -i 's/dev/prod/' app.conf
+
+After:
+
+APP_ENV=prod
+Real-Time Example
+
+Updating Deployment Version
+
+sed -i 's/v1.0/v2.0/' deployment.yaml
