@@ -1,0 +1,15 @@
+Search Text
+grep nginx app.log
+
+Ignore Case
+grep -i error app.log
+
+Count Occurrences
+grep -c ERROR app.log
+
+Real-Time Example
+Find Failed Logins
+grep "Failed password" /var/log/auth.log
+
+Search Multiple Logs
+grep -r ERROR /var/log/
