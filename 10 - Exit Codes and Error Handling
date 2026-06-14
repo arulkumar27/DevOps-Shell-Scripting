@@ -1,0 +1,33 @@
+What is Exit Code?
+
+Every Linux command returns a status.
+
+0 = Success
+
+1-255 = Failure
+
+Check Exit Code:
+
+ls
+
+echo $?
+
+Production Example
+systemctl restart nginx
+
+if [ $? -eq 0 ]
+then
+    echo "Restart Success"
+else
+    echo "Restart Failed"
+fi
+
+Strict Error Handling
+set -e
+
+Stops script when an error occurs.
+
+Debug Mode
+set -x
+
+Shows each command during execution.
