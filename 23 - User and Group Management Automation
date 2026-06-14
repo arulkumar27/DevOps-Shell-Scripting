@@ -1,0 +1,39 @@
+Create User
+useradd devops
+
+Set Password:
+passwd devops
+
+Create Group
+groupadd developers
+
+Add User to Group
+usermod -aG developers devops
+
+Check User Information
+id devops
+
+Real-Time DevOps Example
+Bulk User Creation
+
+users.txt
+
+john
+raj
+arul
+
+Script:
+
+#!/bin/bash
+
+for USER in $(cat users.txt)
+do
+    useradd $USER
+    echo "$USER created"
+done
+Remove User
+userdel username
+
+Remove Home Directory:
+
+userdel -r username
