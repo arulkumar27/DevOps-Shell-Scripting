@@ -1,0 +1,18 @@
+Check Memory
+free -m
+
+Memory Usage Percentage
+free | awk '/Mem/ {print $3/$2 * 100.0}'
+
+Production Monitoring Script
+MEMORY=$(free | awk '/Mem/ {print int($3/$2 * 100)}')
+
+if [ "$MEMORY" -gt 85 ]
+then
+    echo "Memory Critical"
+fi
+
+Real-Time Example
+Monitoring Java Application Memory
+
+ps -eo pid,%mem,cmd --sort=-%mem
