@@ -1,0 +1,19 @@
+View Logs
+tail app.log
+
+Live Monitoring
+tail -f app.log
+
+Error Search
+grep ERROR app.log
+
+Count Errors
+grep -c ERROR app.log
+
+Production Script
+ERRORS=$(grep -c ERROR app.log)
+
+if [ "$ERRORS" -gt 100 ]
+then
+    echo "Application Issue Detected"
+fi
