@@ -1,0 +1,38 @@
+Why Backups Matter
+
+Imagine:
+
+Production Server Crash
+Database Deleted
+Application Corruption
+
+Without backup:
+
+Business Loss
+
+With backup:
+
+Restore in Minutes
+Simple Backup
+tar -czvf backup.tar.gz /var/www
+Date-Based Backup
+tar -czvf backup-$(date +%F).tar.gz /data
+
+Output:
+
+backup-2026-06-14.tar.gz
+Production Backup Script
+#!/bin/bash
+
+SOURCE="/data"
+DEST="/backup"
+
+DATE=$(date +%F-%H%M)
+
+tar -czvf $DEST/backup-$DATE.tar.gz $SOURCE
+
+echo "Backup Completed"
+Auto Backup Using Cron
+0 1 * * * /opt/scripts/backup.sh
+
+Runs every day at 1 AM.
