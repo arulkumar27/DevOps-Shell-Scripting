@@ -1,4 +1,4 @@
-# DevOps-Shell-Scripting
+# Shell-Scripting-Hands-On-Guide
 Complete Shell Scripting for DevOps with real-world automation scripts, interview questions, troubleshooting scenarios, and production examples.
 1. Introduction to Shell Scripting
 2. Bash Fundamentals
